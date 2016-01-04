@@ -14,4 +14,4 @@ employeePay = 22.50;
 var employeeHours;
 employeeHours = 37;
 
-console.log(employeePay * employeeHours);
+console.log("$" + employeePay * employeeHours);
