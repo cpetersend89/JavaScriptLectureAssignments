@@ -93,7 +93,7 @@ else {
 */
 
 /*
-//JavaScript Loop Assignment Part 3
+//JavaScript Loop Assignment "Fizzbuzz" Part 3
 
 var number = 1;
 
@@ -119,19 +119,19 @@ while (number <= 100) {
 }
 */
 
-
+/*
 //JavaScript Function Assignment Part 4
 
 var payroll;
 var overtime;
 overtime = 1.5;
 
-function payrollCalc(employeeName, employeePay, employeeHours) {
-	employeeName = prompt ("Enter employee name");
+function payrollCalc() {
+	var employeeName = prompt ("Enter employee name");
 	console.log(employeeName);
-	employeePay = prompt("Enter employee hourly wage");
+	var employeePay = prompt("Enter employee hourly wage");
 	console.log("Hourly wage" + " " + "$" + employeePay);
-	employeeHours = prompt("Enter employee hours");
+	var employeeHours = prompt("Enter employee hours");
 	console.log("Total hours" + " " + employeeHours);
 	
 if (employeeHours <= 40){
@@ -144,6 +144,33 @@ else {
 
 	payroll = prompt("Payroll Entry? 'Y' Yes 'N' No");
 while (payroll === "Y" || payroll === "y"){
-	console.log(payrollCalc())
+	console.log(payrollCalc());
 	payroll = prompt("Another Employee? 'Y' Yes 'N' No");	
 }
+*/
+
+//JavaScript Function re-work Assignment 4
+
+function employeeName(first, last) {
+	console.log(first + " " + last + "'s" + " " + "weekly pay:")
+}
+
+function regularPay(wage, hours) {
+	var regPayCalc;
+	regPayCalc = ("$" + wage * hours);
+	return regPayCalc;
+}
+
+function overtimePay(wage, hours) {
+	var overtimeRate;
+	var overtimeCalc;
+	overtimeRate = 1.5;
+	overtimeCalc = ("$" + ((40 * wage) + (((hours - 40) * wage) * overtimeRate)));
+	return overtimeCalc;
+}
+
+employeeName("Christian", "Petersen")
+console.log(overtimePay(10, 41))
+
+employeeName("John", "Doe")
+console.log(regularPay(10, 35))
