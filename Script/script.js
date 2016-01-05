@@ -5,7 +5,9 @@
 document.write("Christian Petersen");
 console.log("I am 26 years old");
 alert("Orlando, Florida");
+*/
 
+/*
 //JavaScript Variables Assignment
 
 var employeePay;
@@ -31,8 +33,9 @@ employeeHours2 = prompt("Total Hours?");
 
 console.log("Employee Hours" + " " + employeeHours2);
 console.log("Weekly Pay" + " " + "$" + employeePay2 * employeeHours2);
+*/
 
-
+/*
 //JavaScript Variables Assignment Part 2
 
 var overtime;
@@ -65,10 +68,10 @@ else {
 	console.log("Employee Two Weekly Pay" + " " + "$" + overtimePay);
 }
 
-var secondEmployee;
-secondEmployee = prompt("Another employee 'Y' (yes) 'N' (no)")
+var anotherEmployee;
+anotherEmployee = prompt("Another employee 'Y' (yes) 'N' (no)")
 
-if (secondEmployee === "Y" || secondEmployee === "y"){
+if (anotherEmployee === "Y" || anotherEmployee === "y"){
 	employee2Pay = prompt("Enter hourly wage");
 	employee2Hours = prompt("Enter total hours worked");
 	regularPay2 = employee2Pay * employee2Hours;
@@ -89,7 +92,8 @@ else {
 }
 */
 
-//JavaScript Variables Assignment Part 3
+/*
+//JavaScript Loop Assignment Part 3
 
 var number = 1;
 
@@ -113,4 +117,33 @@ while (number <= 100) {
 	
 	number++;
 }
+*/
 
+
+//JavaScript Function Assignment Part 4
+
+var payroll;
+var overtime;
+overtime = 1.5;
+
+function payrollCalc(employeeName, employeePay, employeeHours) {
+	employeeName = prompt ("Enter employee name");
+	console.log(employeeName);
+	employeePay = prompt("Enter employee hourly wage");
+	console.log("Hourly wage" + " " + "$" + employeePay);
+	employeeHours = prompt("Enter employee hours");
+	console.log("Total hours" + " " + employeeHours);
+	
+if (employeeHours <= 40){
+	return employeePay * employeeHours;
+}
+else {
+	return ((40 * employeePay) + (((employeeHours - 40) * employeePay) * overtime));
+} 
+}
+
+	payroll = prompt("Payroll Entry? 'Y' Yes 'N' No");
+while (payroll === "Y" || payroll === "y"){
+	console.log(payrollCalc())
+	payroll = prompt("Another Employee? 'Y' Yes 'N' No");	
+}
