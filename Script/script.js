@@ -152,7 +152,7 @@ while (payroll === "Y" || payroll === "y"){
 //JavaScript Function re-work Assignment 4
 
 function employeeName(first, last) {
-	console.log(first + " " + last + "'s" + " " + "weekly pay:")
+	console.log(first + " " + last + "'s" + " " + "weekly pay:");
 }
 
 function regularPay(wage, hours) {
@@ -169,8 +169,8 @@ function overtimePay(wage, hours) {
 	return overtimeCalc;
 }
 
-employeeName("Christian", "Petersen")
-console.log(overtimePay(10, 41))
+employeeName("Christian", "Petersen");
+console.log(overtimePay(10, 41));
 
-employeeName("John", "Doe")
-console.log(regularPay(10, 35))
+employeeName("John", "Doe");
+console.log(regularPay(10, 35));
